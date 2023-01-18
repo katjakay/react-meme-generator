@@ -1,19 +1,28 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
-export default function App() {
-  const [templates, setTemplates] = useState([]);
-
-  // 1. Set the meme template by requesting access to API of website link -> GET
- useEffect(() => {
-    fetch('https://memegen.link/').then(x =>
-    x.json().then(response => setTemplates(response.data.memes))
-    );
-  }, []);
-
-  // 2. Looop over the images and display images
-  return <div style={{ textAlign: "center"}}>
-    {templates.map(template => {
-      return <img key={template.id} src={template.url} alt={template.name} />;
-       })}
-  </div>
-}}
+export default function ExampleEvents() {
+  const [meme, setMeme] = useState('Meme');
+  return (
+    <>
+      <h1>Meme Generator</h1>
+      <input
+        value=""
+        onChange={(event) => {
+          // The current value of the text in the input
+          console.log('event.currentTarget.value', event.currentTarget.value);
+          setMeme(event.currentTarget.value);
+        }}
+      />
+      Top text
+      <input
+        value=""
+        onChange={(event) => {
+          // The current value of the text in the input
+          console.log('event.currentTarget.value', event.currentTarget.value);
+          setMeme(event.currentTarget.value);
+        }}
+      />
+      Bottom text
+    </>
+  );
+}
