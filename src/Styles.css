@@ -1,0 +1,77 @@
+.body {
+  background-color: #d1d3b1;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.meme {
+  position: relative;
+  width: 90%;
+  margin: auto;
+}
+
+.meme > img {
+  width: 100%;
+}
+
+.meme > h2 {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: 'Futura';
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #141414;
+}
+
+.meme > .bottom {
+  bottom: 0;
+}
+
+.meme > .top {
+  top: 0;
+}
+
+form {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.headline {
+  text-align: center;
+  font-family: 'Futura';
+  font-size: 3em;
+}
+
+button {
+  margin: 3em;
+  background-color: rgb(94, 80, 63);
+  border-radius: 0.3em;
+  color: white;
+  font-size: 14px;
+  padding: 5px;
+}
+
+label {
+  margin-right: 10px;
+  margin-left: 20px;
+  font-family: 'Helvetica';
+  font-size: 16px;
+}
+
+p {
+  position: center;
+  margin: 40px;
+  text-align: center;
+}

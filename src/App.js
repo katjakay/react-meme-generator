@@ -1,28 +1,19 @@
-import React, { useState } from 'react';
+import './Styles.css';
+import MemeGenerator from './MemeGenerator';
 
-export default function ExampleEvents() {
-  const [meme, setMeme] = useState('Meme');
+export default function App() {
   return (
-    <>
-      <h1>Meme Generator</h1>
-      <input
-        value=""
-        onChange={(event) => {
-          // The current value of the text in the input
-          console.log('event.currentTarget.value', event.currentTarget.value);
-          setMeme(event.currentTarget.value);
-        }}
-      />
-      Top text
-      <input
-        value=""
-        onChange={(event) => {
-          // The current value of the text in the input
-          console.log('event.currentTarget.value', event.currentTarget.value);
-          setMeme(event.currentTarget.value);
-        }}
-      />
-      Bottom text
-    </>
+    <div className="body">
+      <h1 className="headline"> Meme Generator </h1>
+      <p>
+        Creating your personalized meme is easy! Fill in the fields for Top and
+        Bottom text & click generate. Search for your template and see what
+        happens:
+      </p>
+
+      <div className="App">
+        <MemeGenerator />
+      </div>
+    </div>
   );
 }
